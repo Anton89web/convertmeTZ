@@ -1,0 +1,107 @@
+@import 'reset';
+@import 'blocks/header';
+@import 'blocks/home';
+@import 'blocks/careers';
+@import 'blocks/details';
+@import 'blocks/testimonials';
+@import 'blocks/footer';
+@import 'blocks/modal';
+@import 'slick';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.6rem;
+  color: $text-main-black;
+  font-family: 'Poppins', system-ui, sans-serif;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 100%;
+}
+
+.inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.logo {
+  @extend %logo;
+}
+
+.link {
+  @extend %link;
+}
+
+.link_active {
+  @extend %link-active
+}
+
+.btn {
+  @extend %btn;
+
+  &-modal {
+    @extend %btn-open-modal;
+    @extend %flex-sw;
+
+    &:hover .btn__arrow {
+      left: 13px;
+    }
+  }
+
+  &__arrow {
+    position: relative;
+    left: 10px;
+    transition: all .3s linear;
+  }
+
+  &__shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.title-h1 {
+  @extend %h1;
+}
+
+.title-h2 {
+  @extend %h2;
+}
+
+.paragraph {
+  @extend %paragraph-black;
+}
+
+.stop__scroll {
+  overflow-y: hidden;
+}
+
+.top {
+  transform: rotate(45deg) translateX(4.5px) translateY(8px);
+}
+
+.bottom {
+  transform: rotate(-45deg) translateX(5px) translateY(-8px);
+}
+
+.none {
+  display: none;
+}
+
+@import "adaptive";

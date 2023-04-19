@@ -1,0 +1,60 @@
+@import "../vars";
+
+.details {
+  padding-top: 8.5rem;
+  padding-bottom: 12rem;
+  &__inner {
+    background-color: #ECF8F9;
+  }
+
+  &__header {
+    border-bottom: 4px solid #E0F1F2;
+    height: 113px;
+  }
+
+  &__tabs {
+    max-width: 630px;
+    @extend %flex-sw;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 15px;
+  }
+
+  &__tab {
+    @extend %h4;
+    position: relative;
+    border-bottom: 4px solid #E0F1F2;
+    transition: $transition;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 4px;
+    cursor: pointer;
+    &:hover{
+      color: $tab-active-color;
+    }
+    &-active{
+      @extend %tab-active
+    }
+  }
+
+  &__list{
+    &-wrapper{
+      padding: 9.6rem 0;
+    }
+    &-items{
+      max-width: 840px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+    }
+    &-item{
+      list-style: disc inside;
+      @extend %paragraph-black;
+      color: $black;
+    }
+  }
+
+
+}

@@ -1,0 +1,76 @@
+@import "../vars";
+
+.popup{
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+  &__close{
+    position: relative;
+    right: -6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: $bg-black;
+    margin-left: auto;
+    cursor: pointer;
+    transition: $transition;
+    &:hover{
+      background-color: #ab1919;
+    }
+  }
+  &__inner{
+    max-width: 914px;
+    background-color: white;
+    padding: 4.8rem 11.6rem 12.8rem 12.8rem;
+  }
+  &__title{
+    @extend %h2;
+    margin-bottom: 2.4rem;
+  }
+  &__subtitle{
+    @extend %paragraph-black;
+    margin-bottom: 7rem;
+  }
+  &__form{
+    display: flex;
+    flex-direction: column;
+    max-width: 405px;
+  }
+}
+
+.form{
+  &__input{
+    @extend %paragraph-black;
+    color: $text-main-black;
+    border: none;
+    border-bottom: 1px solid rgba($text-main-black, .2);
+    margin-bottom: 2.4rem;
+    outline: none;
+    &::placeholder{
+      @extend %paragraph-black;
+      opacity: $placeholder-opacity;
+    }
+  }
+  &__btn{
+    margin-top: 3rem;
+    max-width: 21.7rem;
+  }
+}
+
+.input__label{
+  @extend %paragraph-small;
+  margin-bottom: 8px;
+}
+
+.popup-hide{
+  display: none;
+}

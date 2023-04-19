@@ -1,0 +1,65 @@
+@import "../vars";
+
+.testimonials {
+  background-color: #F9F9FF;
+
+  &__inner {
+    padding: 10.5rem 0 14.2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+.testimonial {
+  display: flex;
+  position: relative;
+  &__tricolor-left {
+    height: 100%;
+    width: 16.5px;
+    object-fit: cover;
+  }
+
+  &__text {
+    max-width: 603px;
+    background-color: $white;
+    padding: 5.3rem 6.9rem 0.5rem 4.0rem;
+  }
+
+  &__quotes {
+    position: absolute;
+    top: -19px;
+    right: 4rem;
+  }
+}
+
+.carousel {
+  &__header {
+    opacity: $text-main-opacity;
+    color: $text-main-black;
+    @extend %h4;
+    max-width: 500px;
+    margin-bottom: 2.4rem;
+  }
+
+  &__person {
+    display: flex;
+    align-items: center;
+  }
+
+  &__person-img {
+    margin-right: 1.6rem;
+    height: 3.8rem;
+  }
+}
+
+.person {
+  &__name {
+    @extend %h6;
+  }
+
+  &__position {
+    @extend %paragraph-small
+  }
+}
+

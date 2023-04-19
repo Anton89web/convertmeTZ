@@ -1,0 +1,20 @@
+@import "../vars";
+
+.footer{
+  background-color: $ghost-orange;
+
+  &__inner{
+    @extend %flex-sw;
+    align-items: center;
+    height: 8rem;
+  }
+  &__copyright{
+    @extend %label;
+    margin: 0 auto 0 9.4rem;
+  }
+  &__socials{
+    @extend %flex-sw;
+    gap: 2.6rem;
+  }
+
+}

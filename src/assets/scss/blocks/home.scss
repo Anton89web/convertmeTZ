@@ -1,0 +1,47 @@
+@import "../vars";
+
+.home {
+  background-color: $bg-black;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 20rem 0 7rem;
+  }
+
+  &__description {
+    padding-top: 8rem;
+    max-width: 60rem;
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+  }
+
+  &__paragraph {
+    @extend %paragraph-white;
+    margin-bottom: 5rem;
+    max-width: 510px;
+  }
+
+  &__img-wrapper {
+    @extend %flex-sw
+  }
+
+  &__img-first {
+    align-self: flex-end;
+  }
+
+  &__img-second {
+    align-self: flex-end;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__img-third {
+    align-self: flex-start;
+    width: 2.4rem;
+    height: 51%;
+    object-fit: cover;
+  }
+}
