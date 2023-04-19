@@ -18,6 +18,7 @@ function Popup() {
     popup.style.top = `${window.pageYOffset}px`
     popup.classList.remove('popup-hide')
     showMenu()
+    body.classList.add('stop__scroll')
   }
 
   btnModal.addEventListener("click", showPopup)
@@ -25,6 +26,7 @@ function Popup() {
   popup.addEventListener("click", e => {
     if (e.target === btnSubmit) {
       e.preventDefault()
+      document.popup.reset()
       hidePopup()
     } else if (e.target === popup || e.target === btnClose || e.target === closeCross) {
       hidePopup()
